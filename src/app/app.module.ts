@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -20,6 +21,7 @@ import { LayoutModule } from '@angular/cdk/layout';
   declarations: [
     AppComponent,
    routingComponents,
+   HomeComponent,
   ],
   imports: [
     BrowserModule,
