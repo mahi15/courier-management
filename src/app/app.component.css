@@ -1,0 +1,22 @@
+
+.navbar-default{
+    padding: 6px;
+}
+navbar a{
+    font-size: 22px;
+}
+.navbar-default .navbar-nav a{
+    font-size: 20px;
+}
+.con1{
+    margin-top: -20px;
+    height: 720px;
+    width: 100%;
+    background-color:aliceblue;
+    
+}
+.headers{
+    font-size: 20px;
+    flex: 1 1 auto;
+}
+
