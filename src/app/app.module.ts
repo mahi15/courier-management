@@ -14,6 +14,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -22,6 +24,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
    routingComponents,
    HomeComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { HomeComponent } from './home/home.component';
     MatButtonModule,
     MatIconModule,
     BrowserAnimationsModule,
-    LayoutModule 
+    LayoutModule,
+    FormsModule
 
   ],
   providers: [],
