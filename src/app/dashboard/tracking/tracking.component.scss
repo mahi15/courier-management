@@ -1,0 +1,85 @@
+$medikoeblue: #008ad2;
+$medikoeorange: #f07c00;
+$medikoelightorange: #fdf2e5;
+
+@media (min-width: 768px) {
+    .Dashboard {
+        margin-top: 8px;
+        .dash-margin {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .dash-card {
+            margin-top: 25px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 9px 0 rgba(105, 113, 119, 0.15);
+            background-color: #ffffff;
+        }
+        .dash-heading {
+            background: rgba(204,204,204,0.2);
+            padding: 15px 5px 5px 15px;
+            border-radius: 5px;
+        }
+        .dashboard-head {
+            border-left: 10px solid $medikoeorange;
+        }
+        .dash-cont-1 {
+            margin-top: 25px;
+            border: solid 1px #cccccc;
+            padding: 17px;
+            border-radius: 7px;
+            .crown {
+                color: #008ad2;
+            }
+        }
+        
+            
+            .btn1 {
+                color:#ffffff;
+                border-radius: 5px; 
+                background: #f07c00;
+                width: 80px;
+             }
+             
+             
+             
+        
+        
+    }
+}
+@media (min-width: 100px) and (max-width: 767px) {
+    .Dashboard {
+        margin-top: 8px;
+        .dash-margin {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .dash-heading {
+            background: #eee;
+            padding: 5px 1px 1px 8px;
+        }
+        .dashboard-head {
+            border-left: 10px solid $medikoeorange;
+        }
+        .dash-cont-1 {
+            margin-top: 25px;
+            border: solid 1px #008ad2;
+            padding: 17px;
+            border-radius: 7px;
+        }
+        .crown {
+            color: #008ad2;
+        }
+        .dash-section1 {
+              .btn1 {
+                 color: #ffffff; 
+              }
+              
+              
+        }
+    
+    }
+
+}

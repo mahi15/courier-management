@@ -8,12 +8,9 @@
             <span class="navbar-brand">COURIER</span>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="" routerLink="/home">Home</a></li>
-            <li><a href="#" routerLink="/register">Register</a></li>
-            <li><a href="#" routerLink="/login">Login</a></li>
-            
-            
-           
+            <li *ngIf="!auth.isLoggedin()"><a routerLink="/register">Register</a></li>
+            <li *ngIf="!auth.isLoggedin()"><a routerLink="/login">Login</a></li>
+            <li *ngIf="auth.isLoggedin()" (click)="logout()"><a href="#">Logout</a></li>
         </ul>
     </div>
   </nav>

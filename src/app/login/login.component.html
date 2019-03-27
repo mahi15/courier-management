@@ -2,41 +2,45 @@
     <div fxLayout="row" fxLayout.xs="column">
         <div fxFlex="20%"></div>
         <div fxFlex="60%">
-                <mat-card class="login-card">
-                    <h2 class="text-center">LOGIN FORM</h2>
-                    <br>
-                    <div fxLayout="row" fxLayout.xs="column">
-                      <div fxFlex="41%" fxLayoutGap="">
-                            <img class="login-image" src="assets/images/login.jpg" alt="courier">
-                      </div>
-                      <div fxFlex="8%" ></div>
-                       <div class="login-form" fxFlex="51%">
-                        <form >
-                         <div class=" form-group" >
-                             <input class="form-control username" type="text" required  
-                              placeholder="UserName">
-                               <!-- <small class="text-danger" [class.d-none]="name.valid || name.untouched" >name is required</small> -->
-                         </div>
-                         <br>
-                         <div class=" form-group" >
-                                <input class="form-control user-pass" type="password" required
-                                 placeholder="password">
+            <mat-card class="login-card">
+                <h2 class="text-center">LOGIN FORM</h2>
+                <br>
+                <div fxLayout="row" fxLayout.xs="column">
+                    <div fxFlex="41%" fxLayoutGap="">
+                        <img class="login-image" src="assets/images/login.jpg" alt="courier">
+                    </div>
+                    <div fxFlex="8%" ></div>
+                    <div class="login-form" fxFlex="51%">
+                        <!-- <form #loginForm="ngForm" (ngsubmit)="onSubmit()" > -->
+                        <form [formGroup]="loginForm" (submit)="onSubmit()" >
+                            <!-- <div class="form-group" >
+                                <input class="form-control username" [(ngModel)]="email" required name="name"  type="email" placeholder="Email">
                             </div>
+                            <br>
+                            <div class="form-group" >
+                                <input class="form-control user-pass" type="password" required name="password" [(ngModel)]="password" placeholder="password">
+                            </div> -->
+                            <mat-form-field appearance="outline">
+                                <input type="text" matInput formControlName="email" placeholder="Email">
+                            </mat-form-field>
+                            <br>
+                            <mat-form-field appearance="outline">
+                                <input type="password" matInput formControlName="password" placeholder="Password">
+                            </mat-form-field>
+                            <br>
                             <div>
-                                <span href="">new Account</span>
+                                <div>new account <a [routerLink]="['/register']">register here</a></div>
                             </div>
                             <br>
                             <div class="">
-                                 <button fxFlexOffset="" routerLink="/home" class="btn btn-success">
-                                    <span style="font-size:20px">
-                                       Submit
-                                    </span>
+                                <button class="btn btn-success" type="submit" name="submit">
+                                    <span style="font-size:20px">Submit</span>
                                 </button>
-                             </div>
+                            </div>
                         </form>
-                     </div>
                     </div>
-                    </mat-card>    
+                </div>
+            </mat-card>
         </div>
     </div>
 </div>

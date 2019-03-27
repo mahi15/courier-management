@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService } from '../auth.service';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Router } from '@angular/router';
 // import { Router } from "@angular/router";
 
 
@@ -18,7 +19,8 @@ export class RegisterComponent implements OnInit {
   public repassword: string;
 
 // tslint:disable-next-line: variable-name
-  constructor(private _register: AuthService, ) {}
+  constructor(private _register: AuthService,
+              private router: Router, ) {}
 
   ngOnInit() {
   }
@@ -31,7 +33,7 @@ export class RegisterComponent implements OnInit {
       password: this.password
     };
     this._register.enroll(data);
-    alert('SUCCESSFULLY REGISTERED');
+    this.router.navigate(['/login']);
   }
 
 }

@@ -11,7 +11,9 @@ export const environment = {
   projectId: 'courier-dd537',
   storageBucket: 'courier-dd537.appspot.com',
   messagingSenderId: '702761394714'
-  }
+  },
+
+  apiKey: '	a0a8d1d5-6ecb-4843-895f-9d82e1d488ea'
 };
 
 /*

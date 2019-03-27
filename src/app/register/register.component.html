@@ -4,7 +4,7 @@
       <img src="assets/images/courier-service.jpg" alt="IMG">
     </div>
 
-    <form class="contact1-form validate-form" (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <form class="contact1-form validate-form" (submit)="onSubmit()" #userForm="ngForm">
       <span class="contact1-form-title">
         Register to track multiple orders
       </span>
@@ -13,13 +13,11 @@
          placeholder="Name" [(ngModel)]="name">
         <mat-error>name is required</mat-error>
       </div>
-      <!-- {{name.valid}} -->
       <div class="form-group" >
         <input class="input1 form-control" type="tel" required pattern="^\d{10}$" 
         name="phone" placeholder="number" [(ngModel)]="phone">
         <span ></span>
       </div>
-      <!-- {{phone.valid}} -->
       <div class="wrap-input1  form-group" data-validate = "Valid email is required: ex@abc.xyz">
         <input class="input1 form-control" type="text"
         name="email" placeholder="Email" [(ngModel)]="email">
@@ -32,7 +30,7 @@
         <span class="shadow-input1"></span>
       </div>
       <div class="container-contact1-form-btn">
-        <button class="contact1-form-btn" routerLink="/login">
+        <button class="contact1-form-btn" type="submit">
           <span style="font-size:20px">
             Submit
           </span>

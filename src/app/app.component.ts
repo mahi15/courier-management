@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,5 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'courier';
-  
+  constructor(
+    public auth: AuthService,
+    public router: Router
+  ) {}
+
+  logout() {
+    localStorage.removeItem('user');
+    this.router.navigate(['login']);
+  }
 }
