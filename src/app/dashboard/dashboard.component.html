@@ -1,6 +1,6 @@
-<a routerLink="/dashboard/home">
-  <div class="topicType" [ngClass]="{'active': urlName === '/dashboard/home'}">
-    <i class="icofont-chart-histogram leftIcon"></i>Home<span class="float-right font18" *ngIf="urlName === '/dashboard/home'"><i
+<a routerLink="/dashboard">
+  <div class="topicType" [ngClass]="{'active': urlName === '/dashboard'}">
+    <i class="icofont-chart-histogram leftIcon"></i>Home<span class="float-right font18" *ngIf="urlName === '/dashboard'"><i
     class="fas fa-caret-right rightIcon"></i></span>
   </div>
 </a>
@@ -17,9 +17,9 @@
   </div>
 </a>
 
-<a routerLink="/dashboard/logout">
-  <div class="topicType" [ngClass]="{'active': urlName === '/dashboard/history'}">
-    <i class="icofont-ui-calendar leftIcon"></i>logout<span class="float-right font18" *ngIf="urlName === '/dashboard/logout'"><i
+<a (click)="logout()">
+  <div class="topicType" >
+    <i class="icofont-ui-calendar leftIcon"></i>logout<span class="float-right font18" ><i
     class="fas fa-caret-right rightIcon"></i></span>
   </div>
   </a>

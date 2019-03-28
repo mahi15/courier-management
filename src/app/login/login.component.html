@@ -1,4 +1,4 @@
-<div >
+<div class="full-page" [ngStyle]="{'background-color':'#ffcdd2'}" >
     <div fxLayout="row" fxLayout.xs="column">
         <div fxFlex="20%"></div>
         <div fxFlex="60%">
@@ -20,11 +20,11 @@
                             <div class="form-group" >
                                 <input class="form-control user-pass" type="password" required name="password" [(ngModel)]="password" placeholder="password">
                             </div> -->
-                            <mat-form-field appearance="outline">
+                            <mat-form-field appearance="outline" class="email">
                                 <input type="text" matInput formControlName="email" placeholder="Email">
                             </mat-form-field>
                             <br>
-                            <mat-form-field appearance="outline">
+                            <mat-form-field appearance="outline" class="email">
                                 <input type="password" matInput formControlName="password" placeholder="Password">
                             </mat-form-field>
                             <br>

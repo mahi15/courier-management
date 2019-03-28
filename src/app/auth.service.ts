@@ -7,7 +7,6 @@ import * as firebase from 'firebase';
 import { Router } from '@angular/router';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -62,11 +61,26 @@ export class AuthService {
   }
 
   isLoggedin() {
-    if (localStorage.getItem('user') == null || localStorage.getItem('user') == undefined) {
+    if (localStorage.getItem('user') === null || localStorage.getItem('user') === undefined) {
       return false;
     } else {
       return true;
     }
-  };
+  }
+  createShipment(customer: any) {
+    this.afs.collection('shipment').add(customer).then(
+      res => {
+        console.log(res);
+      }
+    );
+    console.log(customer);
+  }
+  getshipment(customer) {
+    return this.afs.collection('shipment', ref => ref.where('tracking_number', '==', customer)).snapshotChanges();
+  }
+  getAllShipment() {
+    return this.afs.collection('shipment').snapshotChanges(); }
+
+
 }
 

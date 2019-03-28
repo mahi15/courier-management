@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-history',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
-
-  constructor() { }
-
+  shipmentList = [];
+  constructor(
+    private auth: AuthService
+  ) { }
+  history: any = [];
   ngOnInit() {
+  this.auth.getAllShipment().subscribe(data => {
+    this.shipmentList = data.map(e => {
+      const id = e.payload.doc.id;
+      const datas = e.payload.doc.data();
+      return {id, ...datas};
+    });
+  });
   }
+
 
 }

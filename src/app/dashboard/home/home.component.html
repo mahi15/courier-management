@@ -7,10 +7,56 @@
         <app-dashboard></app-dashboard>
       </div>
       <div fxFlex="80%">
+          <h4 class="dashboard-head"> &nbsp; <strong> create shipment</strong></h4>
           <mat-card class="dash-card">
               <div fxLayout="row" fxLayout.xs="column">
-                 <div fxFlex=100%>
-                   <img src="" alt="">
+                 <div fxFlex=80%>
+                    <form [formGroup]="createOrder" (submit)="onSubmit()">
+                      <div fxLayout="row">
+                        <div fxFlex="33.3">
+                            <mat-form-field>
+                                <mat-label>select Couriers</mat-label>
+                                <mat-select formControlName="courier">
+                                  <mat-option *ngFor="let slug of courier" [value]="slug.value">
+                                    {{slug.viewValue}}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                            <mat-form-field appearance="outline" >
+                                <input type="text" matInput formControlName="tracking_number" placeholder="tracking_number">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" >
+                              <input type="text" matInput formControlName="title" placeholder="title">
+                          </mat-form-field>
+                        </div>
+                        <div fxFlex="33.3">
+                            <mat-form-field appearance="outline" >
+                                <input type="text" matInput formControlName="Customer_Name" placeholder="sms number">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" >
+                                <input type="email" matInput formControlName="Customer_email" placeholder="email">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" >
+                              <input type="text" matInput formControlName="order_id" placeholder="order_id">
+                          </mat-form-field>
+                        </div>
+                        <div fxFlex="33.3%">
+                            <mat-form-field appearance="outline" >
+                                <input type="text" matInput formControlName="product_name" placeholder="product_name">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" >
+                                <input type="number" matInput formControlName="product_price" placeholder="product_price">
+                            </mat-form-field>
+                        </div>
+
+                      </div>
+                        <br>
+                        <div class="">
+                            <button class="btn btn-default btn1" [disabled]="!createOrder.valid" type="submit" name="submit">
+                                <span style="font-size:20px">create shipment</span>
+                            </button>
+                        </div>
+                    </form>
                  </div>
               </div>
           </mat-card>   

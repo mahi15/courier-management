@@ -13,14 +13,18 @@
                 <div fxLayout="row" fxLayout.xs="column">
                     <div fxFlex="20%"></div>
                    <div fxFlex="50">
+                     <form [formGroup]="track" (submit)="onSubmit()">
                      <div fxLayout="row">
                        <div fxFlex="50%">
-                          <input class="form-control" type="text"> &nbsp; 
+                          <mat-form-field appearance="outline" class="track" >
+                              <input type="text" matInput formControlName="tracknumber" placeholder="enter your consigment number">
+                          </mat-form-field>
+                          <div fxFlexOffset="5px" class="submit" >
+                              <button class=" btn btn-default  btn1">track</button>
+                           </div>
                        </div>
-                       <div fxFlexOffset="5px" fxFlex="20%">
-                          <button class=" btn btn-default  btn1">track</button>
-                       </div>
-                     </div>       
+                     </div> 
+                    </form>      
                    </div>
                   </div>
             </mat-card> 
@@ -28,19 +32,20 @@
             <mat-card class="dash-card">
                 <div fxLayout="row" fxLayout.xs="column">
                     <div fxFlex="30%">
-                        <h3>oder number</h3>
-                        <p>status</p>
-                        <p>description</p> 
+                        <h3>Customer Details</h3>
+                        <h5>Customer-name:{{shipment.Customer_Name}}</h5>
+                        <h5>Customer-email:{{shipment.Customer_email}}</h5> 
                     </div>
                    <div fxFlex="30">
-                      <h3>oder number</h3>
-                      <p>status</p>
-                      <p>description</p>    
+                      <h3>Couier Details</h3>
+                      <h5>Courier-name:{{shipment.courier}}</h5>
+                      <h5>Order-id{{shipment.order_id}}</h5>
+                      <h5>Courier-title{{shipment.title}}</h5>   
                    </div>
                    <div fxFlex="30">
-                      <h3>oder number</h3>
-                      <p>status</p>
-                      <p>description</p>    
+                      <h3>Product Details</h3>
+                      <h5>Product-name:{{shipment.product_name}}</h5>
+                      <h5>Product-price:{{shipment.product_price}}</h5>    
                    </div>
                   </div>
             </mat-card>   

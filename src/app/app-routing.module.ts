@@ -16,7 +16,7 @@ const routes: Routes = [
   canActivate: [AuthGuard],
     children: [
       {
-        path: 'home',
+        path: '',
         component: HomeComponent,
       },
       {
@@ -26,6 +26,10 @@ const routes: Routes = [
       {
         path: 'history',
         component: HistoryComponent,
+      },
+      {
+        path: 'logout',
+        component: LogoutComponent,
       }
     ]
   },

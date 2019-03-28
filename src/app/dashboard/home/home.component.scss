@@ -33,22 +33,16 @@ $medikoelightorange: #fdf2e5;
             .crown {
                 color: #008ad2;
             }
-        }
-        
-            
-            .btn1 {
-                color:#ffffff;
-                border-radius: 5px; 
-                background: #f07c00;
-                width: 100px;
-                height: 40px;
-                margin-top: 10px;
-             }
-             .track{
-                width: 350px;
-            }      
+        } 
     }
-    
+    .dashboard-head {
+        border-left: 10px solid $medikoeorange;
+    }
+    .btn1 {
+        color:#ffffff;
+        border-radius: 5px; 
+        background: #f07c00;
+     }
 }
 @media (min-width: 100px) and (max-width: 767px) {
     .Dashboard {
@@ -82,6 +76,5 @@ $medikoelightorange: #fdf2e5;
         }
     
     }
-    
 
 }

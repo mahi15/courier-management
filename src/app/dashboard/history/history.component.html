@@ -8,22 +8,16 @@
       </div>
       <div fxFlex="80%">
           <mat-card class="dash-card">
-              <div fxLayout="column" fxLayout.xs="column">
-                  <div fxFlex="30%">
-                      <h3>oder number</h3>
-                      <p>status</p>
-                      <p>description</p> 
+              <div fxLayout="row" fxLayout.xs="column" *ngFor="let shipment of shipmentList">
+                  <div fxFlex="100%" >
+                      <h3>Order-id: oder number: {{shipment.order_id}}</h3>
+                      <p>Customer-name: {{shipment.Customer_Name}}</p>
+                      <p>Customer-email: {{shipment.Customer_email}}</p> 
+                      <p>Courier: {{shipment.courier}}</p>
+                      <p> title: {{shipment.title}}</p>
+                      <p>Product-name: {{shipment.product_name}}</p>
+                      <p>Product-price: {{shipment.product_price}}</p>
                   </div>
-                 <div fxFlex="30">
-                    <h3>oder number</h3>
-                    <p>status</p>
-                    <p>description</p>    
-                 </div>
-                 <div fxFlex="30">
-                    <h3>oder number</h3>
-                    <p>status</p>
-                    <p>description</p>    
-                 </div>
                 </div>
           </mat-card>   
      

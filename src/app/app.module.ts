@@ -21,6 +21,7 @@ import { TrackingComponent } from './dashboard/tracking/tracking.component';
 import { HistoryComponent } from './dashboard/history/history.component';
 import { LogoutComponent } from './dashboard/logout/logout.component';
 import { HomeComponent } from './dashboard/home/home.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { HomeComponent } from './dashboard/home/home.component';
     MatInputModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSelectModule
 
   ],
   providers: [AngularFirestore],
